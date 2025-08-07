@@ -22,5 +22,7 @@ huggingface-hub
 python-dotenv
 
 # Machine Learning Utilities
+torch
 numpy
 scikit-learn
+streamlit

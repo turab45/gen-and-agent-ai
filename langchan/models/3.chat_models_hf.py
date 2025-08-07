@@ -10,5 +10,5 @@ llm = HuggingFaceEndpoint(repo_id="meta-llama/Llama-3.2-3B-Instruct",
                           task="text-generation",)
 model = ChatHuggingFace(llm=llm)
 
-result = model.invoke("What is the capital of France? Tell Faiz Ahmed Faiz Poetry Style.")
+result = model.invoke("What is the capital of France? Tell Faiz Ahmed Faiz Poetry Style in urdu.")
 print(result.content)  # Access the content of the response
