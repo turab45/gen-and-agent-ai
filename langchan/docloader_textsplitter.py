@@ -1,5 +1,5 @@
 from langchain_community.document_loaders import PyPDFLoader
-from langchain.text_splitter import CharacterTextSplitter
+from langchain.text_splitter import CharacterTextSplitter, RecursiveCharacterTextSplitter
 
 
 # load the pdf document
@@ -15,3 +15,13 @@ splitter = CharacterTextSplitter(
 docs = splitter.split_documents(pages)
 print(f"Total Chunks: {len(docs)}")
 print(docs[0].page_content)
+
+# Recursive Text Splitter
+recursive_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=150,
+    chunk_overlap=0,
+)
+
+docs_recursive = recursive_splitter.split_documents(pages)
+print(f"Total Chunks: {len(docs_recursive)}")
+print(docs_recursive[0].page_content)
