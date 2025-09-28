@@ -4,7 +4,7 @@ This is the space to learn and master GenAI and Agentic AI.
 
 How to activate the virtual environment:
 ```bash
-. venv/bin/activate
+.venv/Scripts/activate
 ```
 
 How to run the python file:

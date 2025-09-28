@@ -20,6 +20,7 @@ print(docs[0].page_content)
 recursive_splitter = RecursiveCharacterTextSplitter(
     chunk_size=150,
     chunk_overlap=0,
+    separators=["\n\n", "\n", " ", ""]
 )
 
 docs_recursive = recursive_splitter.split_documents(pages)
